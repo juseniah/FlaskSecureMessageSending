@@ -15,5 +15,5 @@ A flask website in Python for secure message sending using encryption and HMAC a
 Then load http://127.0.0.1:5000 in your browser.
 
 ### Login credentials
-Username: James Bond
-Password: password
+* Username: James Bond
+* Password: password
