@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Boss</title>
+  </head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+{% if session['logged_in']%}
+      <form action="{{ url_for('send_boss_message') }}"  method="POST" enctype="multipart/form-data">
+         <h3>Send Message to Boss</h3>
+         Message<br>
+         <input type="password" name="message" data-nlok-ref-guid="c1ec46f6-a2fd-4020-bb23-abe9851e6544"><br>
+
+         <input type="submit" value="send message" data-nlok-ref-guid="d0b67cf5-d0c9-4079-9924-376b39eaa947"><br>
+      </form>
+{% endif %}
+</body>
+  </html>

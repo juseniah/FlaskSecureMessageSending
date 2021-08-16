@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://www.cs.fsu.edu/~jayarama/pythonsu20/Examples/result.html -->
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+
+    {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+    {% endwith %}
+
+      Query Result : {{ msg }}
+      <h2><a href="/">back to home </a></h2>
+      
+   
+
+</body>
+</html>

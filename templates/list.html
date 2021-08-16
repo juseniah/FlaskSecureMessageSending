@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body data-gr-c-s-loaded="true" style="margin: 0px;">
+    {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+    {% endwith %}
+
+{% if session['can_list'] %}
+
+      <table border="1">
+         <thead>
+            <tr><td>Name</td>
+            <td>Alias</td>
+            <td>Security Level</td>
+            <td>Password</td>
+         </tr></thead>
+          <tbody>
+          {% for row in rows.itertuples() %}
+          <tr>
+               <td>{{row[1]}}</td>
+               <td>{{row[2]}}</td>
+               <td> {{row[3]}}</td>
+               <td> {{row[4]}}</td>
+
+            </tr>
+      {% endfor %}
+          </tbody>
+      </table>
+
+{% endif %}
+
+{% if session['logged_in'] %}
+      <h2><a href="/">Go back to home page</a></h2>
+{% endif %}
+
+</body></html>
